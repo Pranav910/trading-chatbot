@@ -44,3 +44,5 @@
 /chatbot/.github
 
 /chat-api/venv
+/chat-api/fast_chat_api/__pycache__
+/chat-api/fast_chat_api/.env
