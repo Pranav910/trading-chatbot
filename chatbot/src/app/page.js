@@ -8,6 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 import './page.css'
 import Image from "next/image";
 import loading from '../../assets/loading.gif'
+import Loader from "@/components/Loader";
 
 export default function Home() {
 
@@ -32,6 +33,7 @@ export default function Home() {
   const [loadingState, setLoadingState] = useState(false)
   const loadingRef = useRef(null)
   const promptViewRef = useRef(null)
+  const [mainPageLoader, setMainPageLoader] = useState(true)
 
   function setUserChat(userChat, fileURL = null) {
     setChats(p => [...p, {
@@ -48,6 +50,23 @@ export default function Home() {
       promptViewRef.current.style.height = `${height}%`
   }
 
+  async function getServerStatus() {
+
+    const res = await fetch("http://localhost:8000/", {
+      method: 'GET',
+    })
+
+    if(res.status === 200){
+        setMainPageLoader(false)
+      }
+  }
+
+  useEffect(() => {
+
+    getServerStatus()
+
+  }, [])
+
   useEffect(() => {
 
     if (loadingState == true) {
@@ -58,7 +77,11 @@ export default function Home() {
   }, [loadingState])
 
   return (
-    <main className="relative h-screen w-full">
+    <main>
+
+      {
+        mainPageLoader? <Loader/>: null
+      }
 
       <h2 className="logo">
         TradingBot
