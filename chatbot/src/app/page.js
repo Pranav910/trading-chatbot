@@ -52,7 +52,7 @@ export default function Home() {
 
   async function getServerStatus() {
 
-    const res = await fetch("http://localhost:8000/", {
+    const res = await fetch("https://bot-service-ufhb.onrender.com", {
       method: 'GET',
     })
 
