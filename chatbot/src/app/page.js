@@ -79,9 +79,11 @@ export default function Home() {
   return (
     <main>
 
-      {
+      {/* {
         mainPageLoader? <Loader/>: null
-      }
+      } */}
+
+      <Loader/>
 
       <h2 className="logo">
         TradingBot

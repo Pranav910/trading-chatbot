@@ -4,4 +4,12 @@
     width: 100%;
     background-color: black;
     z-index: 1000;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10;
 }
+
