@@ -1,0 +1,50 @@
+.chats::-webkit-scrollbar {
+    background-color: transparent;
+    width: 10px;
+}
+
+.logo {
+    color: #f3f3f3;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 23;
+    letter-spacing: -1px;
+}
+
+.chats::-webkit-scrollbar-thumb {
+    background-color: #424242;
+    border-radius: 50px;
+}
+
+.chats {
+    display: flex;
+    flex-direction: column;
+    gap: 5;
+    height: 88%;
+    position: fixed;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.humanchat {
+    place-items: end;
+}
+
+.aichat {
+    margin-bottom: 40px;
+}
+
+.promptview {
+    position: fixed;
+    bottom: 0;
+    height: 13%;
+    padding: 0 400px 0 400px; 
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.loading {
+    margin-left: 400px; 
+}

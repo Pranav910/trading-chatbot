@@ -1,0 +1,46 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/chatbot/node_modules
+/chatbot/.pnp
+/chatbot/.pnp.*
+/chatbot/.yarn/*
+/chatbot/!.yarn/patches
+/chatbot/!.yarn/plugins
+/chatbot/!.yarn/releases
+/chatbot/!.yarn/versions
+
+# testing
+/chatbot/coverage
+
+# next.js
+/chatbot/.next/
+/chatbot/out/
+
+# production
+/chatbot/build
+
+# misc
+/chatbot/.DS_Store
+/chatbot/*.pem
+
+# debug
+/chatbot/npm-debug.log*
+/chatbot/yarn-debug.log*
+/chatbot/yarn-error.log*
+/chatbot/.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+/chatbot/.env*
+
+# vercel
+/chatbot/.vercel
+
+# typescript
+/chatbot/*.tsbuildinfo
+/chatbot/next-env.d.ts
+
+# workflows
+/chatbot/.github
+
+/chat-api/venv
